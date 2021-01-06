@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="index.css">
+	<title>January Birthday Celebrations</title>
+		<style>
+			body{
+				background-image: url('images/green_ivy_background.jpg');
+				background-size: cover;
+			}
+			img:hover {-webkit-transform: scaleX(-1); transform: scaleX(-1);}
+			
+						
+		</style>
+	</head>
+		
+	<body>	
+	<img src="images/lions/frame_0_delay-0.23s.gif" alt="a fun lion" width="500" class="center">	
+	</body>	
+	
+		<p> Hello World</p>
+	
+	<div id="passForm" class="center">
+	<form>
+		<input type="text" id="pswd"
+		<input type="button" value="Submit" onclick="checkPswd();" />
+	</form>
+	</div>
+	
+	<!--Function to check password the already set password is admin-->
+	<script type="text/javascript">
+		function checkPswd() {
+			var confirmPassword = "admin";
+			var password = document.getElementById("pswd").value;
+			if (password == confirmPassword) {
+				 window.location="welcome.html";
+			}
+			else{
+				alert("Passwords do not match.");
+			}
+		}
+	</script>
+</html>
