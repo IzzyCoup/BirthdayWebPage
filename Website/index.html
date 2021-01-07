@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 	<head>
-	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="index.css">
-	<title>January Birthday Celebrations</title>
-		<style>
-			body{
-				background-image: url('images/green_ivy_background.jpg');
-				background-size: cover;
+	<script>
+		// Password check
+		function checkPswd() {
+			var confirmPassword = "admin";
+			var password = document.getElementById("pswd").value;
+			if (password == confirmPassword) {
+				window.location = "welcome.html";
 			}
-			img:hover {-webkit-transform: scaleX(-1); transform: scaleX(-1);}
-			
-						
-		</style>
+			else {
+				alert("Passwords do not match.");
+			}
+		}
+		// Change bg image on click
+		function changeImage() {
+			if (document.getElementById("imageChange").src == "images/lions/frame_0_delay-0.23s.gif") {
+				document.getElementById("imageChange").src = "images/lions/frame_1_delay-0.23s.gif";
+			} else {
+				document.getElementById("imageChange").src = "images/lions/frame_0_delay-0.23s.gif";
+			}
+		}
+	</script>
+
+	<title>January Birthday Celebrations</title>
+	<style>
+		body{
+			background-image: url('images/green_ivy_background.jpg');
+			background-size: cover;
+		}
+		img:hover {-webkit-transform: scaleX(-1); transform: scaleX(-1);}
+	</style>
 	</head>
-		
-	<body>	
-		<img src="images/lions/frame_0_delay-0.23s.gif" alt="a fun lion" width="500" class="center">	
-		
+
+	<body>
+		<p>
+			<img id="imageChange" src="images/lions/frame_0_delay-0.23s.gif" alt="a fun lion" width="auto" class="center" onClick="changeImage()">
+		</p>
+
 		<div class="welcomeMessage" id="passForm">
-			<p>Baby, Welcome to the party</p><br>
+			<p>Baby, Welcome to the party</p>
 			<form>
 				<label for="password">What's the password?</label>
-				<input type="text" id="pswd" name="password"><br>
+				<input type="password" id="pswd" name="password"><br><br>
 				<button type="submit" class="Submit" onclick="checkPswd()">Submit</button>
 			</form>
 		</div>
-		
-		<!--Function to check password the already set password is admin-->
-		<script type="text/javascript">
-			function checkPswd() {
-				var confirmPassword = "admin";
-				var password = document.getElementById("pswd").value;
-				if (password == confirmPassword) {
-					window.location="welcome.html";
-				}
-				else{
-					alert("Passwords do not match.");
-				}
-			}
-		</script>
 	</body>
-
 </html>
