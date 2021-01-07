@@ -18,29 +18,30 @@
 	</head>
 		
 	<body>	
-	<img src="images/lions/frame_0_delay-0.23s.gif" alt="a fun lion" width="500" class="center">	
-	</body>	
-	
-		<p> Hello World</p>
-	
-	<div id="passForm" class="center">
-	<form>
-		<input type="text" id="pswd">
-		<button type="button" value="Submit" onclick="checkPswd()"></button> />
-	</form>
-	</div>
-	
-	<!--Function to check password the already set password is admin-->
-	<script type="text/javascript">
-		function checkPswd() {
-			var confirmPassword = "admin";
-			var password = document.getElementById("pswd").value;
-			if (password == confirmPassword) {
-				 window.location="welcome.html";
+		<img src="images/lions/frame_0_delay-0.23s.gif" alt="a fun lion" width="500" class="center">	
+		
+		<div class="welcomeMessage" id="passForm">
+			<p>Baby, Welcome to the party</p><br>
+			<form>
+				<label for="password">What's the password?</label>
+				<input type="text" id="pswd" name="password"><br>
+				<button type="submit" class="Submit" onclick="checkPswd()">Submit</button>
+			</form>
+		</div>
+		
+		<!--Function to check password the already set password is admin-->
+		<script type="text/javascript">
+			function checkPswd() {
+				var confirmPassword = "admin";
+				var password = document.getElementById("pswd").value;
+				if (password == confirmPassword) {
+					window.location="welcome.html";
+				}
+				else{
+					alert("Passwords do not match.");
+				}
 			}
-			else{
-				alert("Passwords do not match.");
-			}
-		}
-	</script>
+		</script>
+	</body>
+
 </html>
